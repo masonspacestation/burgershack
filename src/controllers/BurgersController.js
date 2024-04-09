@@ -10,6 +10,7 @@ export class BurgersController extends BaseController {
     this.router.get('', this.getBurgers)
     this.router.post('', this.addBurger)
     this.router.delete('/:burgerId', this.deleteBurger)
+    // this.router.put('/:burgerId', this.updateBurger)
 
   }
 
@@ -52,7 +53,16 @@ export class BurgersController extends BaseController {
   }
 
 
-
+  // async updateBurger(request, response, next) {
+  //   try {
+  //     const burgerId = request.params.burgerId
+  //     await burgersServices.updateBurger(burgerId)
+  //     response.send(burgerId)
+  //   } catch (error) {
+  //     next(error)
+  //     console.error(error)
+  //   }
+  // }
 
 
 
